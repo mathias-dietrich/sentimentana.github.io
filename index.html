@@ -26,7 +26,7 @@ xhttp.onreadystatechange = function() {
        document.getElementById("demo").innerHTML = xhttp.responseText;
     }
 };
-xhttp.open("GET", "filename", true);
+xhttp.open("GET", "http://rhos.org:8000/service.json", true);
 xhttp.send();
 </script>
 </head>

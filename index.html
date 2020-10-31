@@ -23,16 +23,18 @@ h1 {
 <script>
 
 	var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
+	//xhttp.responseType = 'json';
 
-    if (this.readyState == 4 && this.status == 200) {
+	xhttp.onload = function(e) {
+
+    if (this.status == 200) {
        // Typical action to be performed when the document is ready:
-       document.getElementById("demo").innerHTML = xhttp.responseText;
+       document.getElementById("demo").innerHTML = xhttp.response.toString();
     }
 };
 
 function load(){
-	xhttp.open("GET", "http://rhos.org:8000/service.json", true);
+	xhttp.open("GET", "http://rhos.org:8000/service.json");
 	xhttp.send();
 	document.getElementById("demo").innerHTML = "waiting...";	
 }

@@ -1,3 +1,0 @@
-<script>
-window.location.href = "http://rest.sentimentana.com:8080/" + window.location.pathname
-</script>

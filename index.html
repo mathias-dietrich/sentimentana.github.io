@@ -8,15 +8,21 @@
 	body {
   background-color: #FEFEFE;
   font-family: Arial;
-  font-size: large;rge;
+  font-size: large;
 }
 
 h1 {
+	padding-left: 10px;
   background-color: #336633;
   color: white;
 }
 .small{
 	font-size: 11px;
+	color: #777777;
+}
+.support{
+	font-size: 15px;
+	color: #777777;
 }
 </style>
 
@@ -36,45 +42,50 @@ h1 {
 function load(){
 	xhttp.open("GET", "http://rhos.org:8000/service.json");
 	xhttp.send();
-	document.getElementById("demo").innerHTML = "waiting...";	
+	//document.getElementById("demo").innerHTML = "waiting...";	
 }
 </script>
 </head>
 <body onload="load()">
-	<center>
+	
 		<h1>Sentimentana</h1>
+		<center>
 <span>
-	<img src="img/sentimentana.png" width=350/>
-<span style="position:absolute;right:10px;"">
-<img src="img/blackswan.png" width=350 height=220/>
+	<img src="img/sentimentana.png" width=350 height=220/>
+		<span style="position:absolute;right:10px;"">
+			<img src="img/blackswan.png" width=350 height=220/>
+		</span>
+		<span style="position:absolute;left:25px;"">
+			<img src="img/Slavery.gif" width=250 height=250/>
+		</span>
 </span>
-</span>
-<!-- TradingView Widget END -->
 
 
 		<h2>Sentiment Analysis</h2>
 
-		<i>Sentiment analysis (also known as opinion mining or emotion AI) refers to the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.</i>
-		<br/>
-		<p>Links:</p>
-		<a href="https://www.kaggle.com/">kaggle.com</a><br/>
-		<a href="https://xgboost.ai/">xgboost.ai</a><br/>
-		<a href="https://www.tensorflow.org/">tensorflow.org</a><br/>
-		<a href="https://scikit-learn.org/">scikit-learn.org</a><br/>
-		<a href="https://www.nltk.org/">nltk.org</a><br/>
-		<a href="https://numpy.org/">numpy.org</a><br/>
-		<a href="https://seaborn.pydata.org/">seaborn.pydata.org</a><br/>
-
-		<a href="https://spark.apache.org/">spark.apache.org</a><br/>
-		<a href="https://news.mit.edu/topic/machine-learning">MIT News</a><br/><br/>
-
-		
-
-
+		<i>Sentiment analysis (also known as opinion mining or emotion AI) refers to the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information. <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">Wikipedia</a></i>
 		<br/><br/>
+
+		<iframe width=500 height=210 bgcolor="#333333" src="http://rhos.org:8080/nasdaq.php" ></iframe><br/>
+		<span class="small">Data by Twitter, NTLK WordNetLemmatizer, NaiveBayes Classifier</span>
+<br/><br/>
+		<div class="support">With support from: <a href="https://www.twitter.com/">twitter.com</a>
+		<a href="https://www.kaggle.com/">kaggle.com</a>
+		<a href="https://xgboost.ai/">xgboost.ai</a>
+		<a href="https://www.tensorflow.org/">tensorflow.org</a>
+		<a href="https://scikit-learn.org/">scikit-learn.org</a>
+		<a href="https://www.nltk.org/">nltk.org</a>
+		<a href="https://numpy.org/">numpy.org</a>
+		<a href="https://seaborn.pydata.org/">seaborn.pydata.org</a>
+		<a href="https://spark.apache.org/">spark.apache.org</a>
+		<a href="https://news.mit.edu/topic/machine-learning">MIT News</a>
+		<a href="https://redhat.com">Red Hat</a></div>
+
+
+		<br/>
 		
 		<a href="mailto:info@sentimentana.com">info@sentimentana.com</a>
-		<br/><br/>
+		<br/>
 		<div id="demo" class="small"></div>
 
 </body>
